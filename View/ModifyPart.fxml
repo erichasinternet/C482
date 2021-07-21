@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #090c10;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifyPartController">
+    <children>
+        <Label layoutX="144.0" layoutY="14.0" text="Modify Part" textFill="#f0f6fc">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <VBox layoutX="50.0" layoutY="125.0" prefHeight="245.0" prefWidth="150.0">
+            <children>
+                <Label text="ID" textFill="#f0f6fc">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Label layoutX="35.0" layoutY="20.0" text="Name" textFill="#f0f6fc">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Label layoutX="10.0" layoutY="45.0" text="Inventory" textFill="#f0f6fc">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <padding>
+                        <Insets left="25.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Label layoutX="10.0" layoutY="70.0" text="Price" textFill="#f0f6fc">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <padding>
+                        <Insets left="25.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Label layoutX="10.0" layoutY="95.0" text="Min" textFill="#f0f6fc">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <padding>
+                        <Insets left="25.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Label layoutX="10.0" layoutY="120.0" text="Max" textFill="#f0f6fc">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <padding>
+                        <Insets left="25.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="variableName" layoutX="10.0" layoutY="145.0" text="Machine ID" textFill="#f0f6fc">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <padding>
+                        <Insets left="25.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="200.0" layoutY="125.0" prefHeight="243.0" prefWidth="150.0">
+            <children>
+                <TextField fx:id="idField" disable="true">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <TextField fx:id="nameField" layoutX="10.0" layoutY="10.0">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <TextField fx:id="inventoryField" layoutX="10.0" layoutY="35.0">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <TextField fx:id="priceField" layoutX="10.0" layoutY="60.0">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <TextField fx:id="minField" layoutX="10.0" layoutY="85.0">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <TextField fx:id="maxField" layoutX="10.0" layoutY="110.0">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <TextField fx:id="variableField" layoutX="10.0" layoutY="110.0">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+            </children>
+        </VBox>
+        <HBox layoutX="108.0" layoutY="44.0" prefHeight="25.0" prefWidth="184.0">
+            <children>
+                <RadioButton fx:id="inHouseRadio" mnemonicParsing="false" onAction="#inHouseSelect" selected="true" text="In-House" textFill="#f0f6fc">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="tgroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="outSourcedRadio" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#outSourcedSelect" text="Outsourced" textFill="#f0f6fc" toggleGroup="$tgroup">
+                    <HBox.margin>
+                        <Insets left="25.0" />
+                    </HBox.margin>
+                </RadioButton>
+            </children>
+            <padding>
+                <Insets top="5.0" />
+            </padding>
+        </HBox>
+        <HBox layoutX="125.0" layoutY="456.0" prefHeight="30.0" prefWidth="150.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#modifyButtonClick" prefHeight="31.0" prefWidth="60.0" text="Modify" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelButtonClicked" prefHeight="31.0" prefWidth="60.0" text="Cancel">
+                    <HBox.margin>
+                        <Insets left="30.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <Label fx:id="errorLabel" layoutX="98.0" layoutY="380.0" prefHeight="76.0" prefWidth="205.0" textFill="RED" wrapText="true">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
